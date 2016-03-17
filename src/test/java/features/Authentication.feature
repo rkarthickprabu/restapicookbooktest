@@ -23,24 +23,23 @@ Feature: Authentication Service
   Scenario: Authentication with correct username and password
     Given User is on the homepage
     When User navigates to the login page
-    And enters correct username
+    And enters "ol-admin" as username
     And enters correct password
     And clicks Submit
     Then Login successful message is displayed
-    And an Authorization token is displayed
 
   @tc2
   Scenario: Authenticating with incorrect username and password
     Given: User is on the homepage
     When: User navigates to the login page
 
-    And enters incorrect username and password
+    And enters incorrect username and password, clicks Submit
     Then Authentication failed message is displayed
 
-  @tc3
-  Scenario: Authenticating with blank username and/or password
-    Given: User is on the homepage
-    When: User navigates to the login page
-
-    And clicks Submit without entering any credentials for username and password
-    Then 'Please fill in this field' error tooltip should be displayed
+  #@tc3
+  #Scenario: Authenticating with blank username and/or password
+    #Given: User is on the homepage
+    #When: User navigates to the login page
+    
+# And clicks Submit without entering any credentials for username and password
+   # Then 'Please fill in this field' error tooltip should be displayed
