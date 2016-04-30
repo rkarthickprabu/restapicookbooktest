@@ -1,3 +1,5 @@
-C:\Users\qatester\workspace\restapicookbooktest\src\test\java\runnerclass\loginpage.java
+C:\Users\qatester\workspace\restapicookbooktest\src\test\java\pageObject\AuthenticationPage.java
+C:\Users\qatester\workspace\restapicookbooktest\src\test\java\pageObject\HomePage.java
 C:\Users\qatester\workspace\restapicookbooktest\src\test\java\cucumberTest\TestRunner.java
-C:\Users\qatester\workspace\restapicookbooktest\src\test\java\stepDefinition\login.java
+C:\Users\qatester\workspace\restapicookbooktest\src\test\java\pageObject\AbstractPage.java
+C:\Users\qatester\workspace\restapicookbooktest\src\test\java\stepDefinition\Login.java

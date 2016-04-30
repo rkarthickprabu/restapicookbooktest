@@ -1,13 +1,10 @@
 package stepDefinition;
 
-import java.util.Iterator;
-import java.util.Set;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,106 +12,69 @@ import pageObject.AuthenticationPage;
 import pageObject.HomePage;
 
 public class Login {
+	
 	WebDriver driver = new FirefoxDriver();
 	HomePage homePage;
 	AuthenticationPage authenticationPage;
-
-	@Given("^User is on the homepage$")
-	public void user_is_on_the_homepage() throws Throwable {
-		//driver.get("http://localhost:9340/serverengine/html/cookbook/index.html");
+	String winHandleBefore;
+	
+	@Given("^Im on the homepage$")
+	public void i_m_on_the_homepage() throws Throwable {
 		homePage = new HomePage(driver);
 		homePage.navigateToWebApp();
+	   
 	}
 
-	@When("^User navigates to the login page$")
-	public void user_navigates_to_the_login_page() throws Throwable {
-		/*driver.findElement(By.linkText("Authenticating with the Connect Server")).click();
-		String subWindowHandler = null;
-		Set<String> handles = driver.getWindowHandles(); // get all window
-															// handles
+	@When("^I navigate to the login page$")
+	public void i_navigate_to_the_login_page() throws Throwable {		
+		// Store the current window handle
+		winHandleBefore = driver.getWindowHandle();
 
-		Iterator<String> iterator = handles.iterator();
-		while (iterator.hasNext()) {
-			subWindowHandler = iterator.next();
+		// Perform the click operation that opens new window
+		authenticationPage = homePage.navigateToAuthenticationPage();		
+		
+	}
+
+	@And("^enter ([^\"]*)$")
+	public void enter(String value) throws Throwable {
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
 		}
-		driver.switchTo().window(subWindowHandler); // switch to popup window*/
-		
-		authenticationPage = homePage.navigateToAuthenticationPage(link);
-		
-		
-	}
 
-	@When("^enters correct username$")
-	public void enters_correct_username() throws Throwable {
-		/*driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("ol-admin");*/
+		// Perform the actions on new window
+		Thread.sleep(5000);
 		authenticationPage.setUsernameField(value);
-		
-		
+	}
+	
+	@And("^password ([^\"]*)$")
+	public void password(String password) throws Throwable {
+				authenticationPage.setPasswordField(password);
+
 	}
 
-	@When("^enters correct password$")
-	public void enters_correct_password() throws Throwable {
-		/*driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("secret");	*/
-		authenticationPage.setPasswordField(value);
+	@And("^click Submit$")
+	public void click_Submit() throws Throwable {
 		
-	}
-
-	@When("^clicks Submit$")
-	public void clicks_Submit() throws Throwable {
-		//driver.findElement(By.id("submit")).click();
 		authenticationPage.submitForm();
 	}
 
-	@Then("^Login successful message is displayed$")
-	public void login_successful_message_is_displayed() throws Throwable {
-		if(driver.getPageSource().contains("Authenticated Successfully"))
-		  {
-		    System.out.println("Pass");
-		  }
-		else
-		  {
-		    System.out.println("Fail");
-		  }
+	@Then("^Result for Login is displayed$")
+	public void result_for_Login_is_displayed() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
 		
+		
+		driver.getPageSource().contains("Authenticated Successfully");
+		// Close the new window, if that window no more required
+		//driver.close();
+
+		
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+		// Continue with original browser (first window)
 	}
 
 
 
-	@Given("^enters incorrect username and password, clicks Submit$")
-	public void enters_incorrect_username_and_password() throws Throwable {
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("ol-admin");	
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("secrt");
-		driver.findElement(By.id("submit")).click();
-	}
-
-	@Then("^Authentication failed message is displayed$")
-	public void authentication_failed_message_is_displayed() throws Throwable {
-		if(driver.getPageSource().contains("'ol-admin' failed"))
-		  {
-		    System.out.println("Pass");
-		  }
-		else
-		  {
-		    System.out.println("Fail");
-		  } 
-			
-	}
-
-	/*@Given("^clicks Submit without entering any credentials for username and password$")
-	public void clicks_Submit_without_entering_any_credentials_for_username_and_password() throws Throwable {
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("submit")).click();
-	}
-
-	@Then("^'Please fill in this field' error tooltip should be displayed$")
-	public void please_fill_in_this_field_error_tooltip_should_be_displayed() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
-	}
-*/
 }

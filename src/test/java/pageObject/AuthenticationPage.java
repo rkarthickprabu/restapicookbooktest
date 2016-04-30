@@ -9,17 +9,18 @@ public class AuthenticationPage extends AbstractPage{
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	
 	public AuthenticationPage setUsernameField(String value) {
+		driver.manage().window().maximize();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys(value);
 		return new AuthenticationPage (driver);
 	}
 	
-	public AuthenticationPage setPasswordField(String value) {
+	public AuthenticationPage setPasswordField(String password) {
 		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys(value);
+		driver.findElement(By.id("password")).sendKeys(password);
 		return new AuthenticationPage (driver);
 		}
 	
@@ -28,5 +29,16 @@ public class AuthenticationPage extends AbstractPage{
 		return new AuthenticationPage (driver);
 	}
 	
-	
+	/*public AuthenticationPage results() {
+		 int result = 0;
+		switch(result) {
+		case 1 : 
+			
+			
+		case 2: 
+		}
+		return new AuthenticationPage (driver);
+		
+	}
+	*/
 }
