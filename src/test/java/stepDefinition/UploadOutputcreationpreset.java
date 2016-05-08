@@ -52,7 +52,10 @@ public void click_on_the_Submit_button() throws Throwable {
 
 @Then("^Managed File ID for OC is displayed$")
 public void managed_File_ID_for_OC_is_displayed() throws Throwable {
-    // Write code here that turns the phrase above into concrete actions
+	Thread.sleep(5000);
+	
+	String OCManagedFileID = driver.findElement(By.className("value")).getText();
+	System.out.println("value of OC Managed file ID is: " + OCManagedFileID);
 
 
 }

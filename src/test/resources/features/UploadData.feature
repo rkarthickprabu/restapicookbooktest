@@ -6,4 +6,4 @@ Feature: Upload data file
     Given Am on the homepage
     When I click on Upload data file
     And click on Browse button
-    Then dialog box opens
+    Then result is displayed

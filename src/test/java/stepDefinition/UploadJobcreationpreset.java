@@ -2,6 +2,7 @@ package stepDefinition;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.en.And;
@@ -49,13 +50,17 @@ public class UploadJobcreationpreset {
 	
 	@Then("^Managed File ID for JC is displayed$")
 	public void managed_File_ID_for_JC_is_displayed() throws Throwable {
-
 		
-		//String ManagedFileID = driver.findElement(By.cssSelector("html body div#results.results fieldset div#results-body div.result div.value")).getAttribute("value");
-		//String ManagedFileID = driver.findElement(By.xpath("/html/body/div[1]/fieldset/div/div[3]/div[2]")).getAttribute("value");
-		//String ManagedFileID = driver.findElement(By.className("value")).getAttribute("value");
-		//System.out.println("value of OC Managed file ID is: " + ManagedFileID);
-	
+		Thread.sleep(5000);
+		
+		String JCManagedFileID = driver.findElement(By.className("value")).getText();
+		System.out.println("value of OC Managed file ID is: " + JCManagedFileID);
+		
+		//WebElement ManagedFileID = driver.findElement(By.xpath("/html/body/div[1]/fieldset/div/div[3]/div[2]"));
+		//WebElement ManagedFileID = driver.findElement(By.className("value"));
+		//System.out.println("value of OC Managed file ID is: " + ManagedFileID.getText());
+		homePage.storeDataFileID();
+
 	}
 
 }

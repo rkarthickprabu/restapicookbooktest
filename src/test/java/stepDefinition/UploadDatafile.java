@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,6 +17,7 @@ public class UploadDatafile {
 	HomePage homePage;
 	UploadingDatafilePage uploadingDatafile;
 	String winHandleBefore;
+	public static String DataManagedFileID;
 	
 
 	@Given("^Am on the homepage$")
@@ -36,17 +36,7 @@ public class UploadDatafile {
 
 	@And("^click on Browse button$")
 	public void click_on_Browse_button() throws Throwable {
-		//driver.findElement(By.id("datafile")).click();
 		
-		//driver.findElement(By.xpath("/html/body/form/fieldset/div[1]/input")).click();
-		
-		// assuming driver is a healthy WebDriver instance
-	//driver.findElement(By.xpath("/html/body/form/fieldset/div[1]/input")).sendKeys("C:/_letter-ol/Promo-EN-10.csv");
-		//driver.findElement(By.id("submit")).click();
-
-		//driver.findElement(By.id("datafile")).sendKeys("C:/_letter-ol/Promo-EN-10.csv");
-		//System.out.println("Hey Current URL:" + driver.getCurrentUrl());
-		//driver.findElement(By.id("submit")).click();
 		for(String winHandle : driver.getWindowHandles()){
 		    driver.switchTo().window(winHandle);
 		}
@@ -56,11 +46,20 @@ public class UploadDatafile {
 		uploadingDatafile.testUploadingData();
 	}
 
-	@Then("^dialog box opens$")
-	public void dialog_box_opens() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	//driver.findElement(By.id("submit")).click();
+
+	@Then("^result is displayed$")
+	public void result_is_displayed() throws Throwable {
+	   
+		Thread.sleep(5000);
+		
+
+	 DataManagedFileID = driver.findElement(By.className("value")).getText();
+		System.out.println("value of OC Managed file ID is: " + DataManagedFileID);
+		//uploadingDatafile.storeDataFileID();
+		homePage.storeDataFileID();
+		
 	}
+
 	
 	
 }

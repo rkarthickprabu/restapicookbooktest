@@ -3,6 +3,8 @@ package pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import stepDefinition.UploadDatafile;
+
 public class UploadingDatafilePage extends AbstractPage{
 
 	public UploadingDatafilePage(WebDriver driver) {
@@ -21,4 +23,12 @@ public class UploadingDatafilePage extends AbstractPage{
 		 return new UploadingDatafilePage (driver);
 	 }
 
+	 
+//	 public UploadingDatafilePage storeDataFileID(){
+//		 System.out.println("Value of DataManagedFileID is: " + UploadDatafile.DataManagedFileID);
+//		 String Str1 = UploadDatafile.DataManagedFileID;
+//		 System.out.println("Value of Str1 is: " + Str1 );
+//
+//		return new UploadingDatafilePage (driver);
+//	 }
 }

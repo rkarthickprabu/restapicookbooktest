@@ -7,7 +7,7 @@ public class AbstractPage {
 	protected WebDriver driver;
 	
 	
-	public AbstractPage (WebDriver driver){
+	public AbstractPage(WebDriver driver){
 		this.driver = driver;	
 	}
 	
@@ -18,10 +18,10 @@ public class AbstractPage {
 		driver.manage().window().maximize();
 		return new HomePage (driver);
 	}
-	
+	//*/
 	/*public void closeDriver() {
 		driver.quit();
 	}
-	*/
+	//*/
 
 }
