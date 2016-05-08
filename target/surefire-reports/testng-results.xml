@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="cucumberTest.RunnerTest" duration-ms="4" started-at="2016-04-04T12:58:12Z" finished-at="2016-04-04T12:58:12Z">
+  <suite name="cucumberTest.RunnerTest" duration-ms="5" started-at="2016-05-08T09:20:48Z" finished-at="2016-05-08T09:20:48Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4" started-at="2016-04-04T12:58:12Z" finished-at="2016-04-04T12:58:12Z">
+    <test name="Command line test" duration-ms="5" started-at="2016-05-08T09:20:48Z" finished-at="2016-05-08T09:20:48Z">
     </test> <!-- Command line test -->
   </suite> <!-- cucumberTest.RunnerTest -->
 </testng-results>

@@ -76,14 +76,41 @@ public void managed_File_ID_entered_in_their_respective_fields() throws Throwabl
 	//System.out.println(UploadDatafile.DataManagedFileID);
 	//System.out.println(UploadingDatafilePage.Str1);
 	//uploadingDatafile.storeDataFileID();
-	homePage.storeDataFileID();
-
+	//homePage.storeDataFileID();
+	//System.out.println("HomePage.fileId is: "+ HomePage.fileId);
+	//Object value = HomePage.readValue("DataManagedFileID");
+	//System.out.println("DataManagedFileId value is: " + value);
+	//value is now saved as type Object. If this needs to be converted to String, just write: value.toString();
+	//value.toString();
+	driver.findElement(By.id("datafile")).clear();
+	driver.findElement(By.id("datafile")).sendKeys((CharSequence) HomePage.readValue("DataManagedFileID", "DataManagedFileID"));
+	
+	//Object value = HomePage.readValue("DatamapperManagedFileID");
+	//System.out.println("DatamapperManagedFileID value is: " + value);
+	driver.findElement(By.id("datamapper")).clear();
+	driver.findElement(By.id("datamapper")).sendKeys((CharSequence) HomePage.readValue("DatamapperManagedFileID", "DatamapperManagedFileID"));
+	System.out.println("DatamapperManagedFileID is: " + HomePage.readValue("DatamapperManagedFileID", "DatamapperManagedFileID"));
+	
+	//Object value2 = HomePage.readValue("TemplateManagedFileID");
+	//System.out.println("TemplateManagedFileID value is: " + value2);
+	driver.findElement(By.id("designtemplate")).clear();
+	driver.findElement(By.id("designtemplate")).sendKeys((CharSequence) HomePage.readValue("TemplateManagedFileID", "TemplateManagedFileID"));
+	
+	//Object value3 = HomePage.readValue("JCManagedFileID");
+	//System.out.println("JCManagedFileID value is: " + value3);
+	driver.findElement(By.id("jcpreset")).clear();
+	driver.findElement(By.id("jcpreset")).sendKeys((CharSequence) HomePage.readValue("JCManagedFileID", "JCManagedFileID"));
+	
+	//Object value4 = HomePage.readValue("OCManagedFileID");
+	//System.out.println("OCManagedFileID value is: " + value4);
+	driver.findElement(By.id("ocpreset")).clear();
+	driver.findElement(By.id("ocpreset")).sendKeys((CharSequence) HomePage.readValue("OCManagedFileID", "OCManagedFileID"));
 }
 
 @And("^Submit$")
 public void submit() throws Throwable {
-    // Write code here that turns the phrase above into concrete actions
 
+		driver.findElement(By.id("submit")).click();
 
 }
 

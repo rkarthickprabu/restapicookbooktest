@@ -56,7 +56,13 @@ public class UploadDatamapper {
 
 	@Then("^Datamapping Managed File ID is displayed$")
 	public void datamapping_Managed_File_ID_is_displayed() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+	
+		Thread.sleep(5000);
+		
+		String DatamapperManagedFileID = driver.findElement(By.className("value")).getText();
+		System.out.println("value of DatamapperManagedFileID is: " + DatamapperManagedFileID);
+		
+		homePage.writeValues("DatamapperManagedFileID", "DatamapperManagedFileID", DatamapperManagedFileID);
 	}
 
 	

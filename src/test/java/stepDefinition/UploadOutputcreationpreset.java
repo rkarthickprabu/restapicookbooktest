@@ -56,6 +56,8 @@ public void managed_File_ID_for_OC_is_displayed() throws Throwable {
 	
 	String OCManagedFileID = driver.findElement(By.className("value")).getText();
 	System.out.println("value of OC Managed file ID is: " + OCManagedFileID);
+	homePage.writeValues("OCManagedFileID", "OCManagedFileID", OCManagedFileID);
+
 
 
 }

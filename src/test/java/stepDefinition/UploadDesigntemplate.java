@@ -52,8 +52,13 @@ public void click_Submit() throws Throwable {
 
 @Then("^Template Managed File ID is displayed$")
 public void template_Managed_File_ID_is_displayed() throws Throwable {
-    // Write code here that turns the phrase above into concrete actions
-  
+
+	Thread.sleep(5000);
+	
+	String TemplateManagedFileID = driver.findElement(By.className("value")).getText();
+	System.out.println("value of TemplateManagedFileID is: " + TemplateManagedFileID);
+	
+	homePage.writeValues("TemplateManagedFileID", "TemplateManagedFileID", TemplateManagedFileID);  
 }
 
 	

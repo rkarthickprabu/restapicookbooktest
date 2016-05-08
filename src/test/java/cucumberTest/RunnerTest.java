@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		format = {"pretty", "json:target/info.json"},
-		features = {"src/test/resources/features"},
+		features = {"src/test/resources/features/aio"},
 		glue = {"src/test/java/stepDefinition"}
 		//tags = {"@tc1"}
 		)

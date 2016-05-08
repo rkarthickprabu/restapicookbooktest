@@ -59,7 +59,8 @@ public class UploadJobcreationpreset {
 		//WebElement ManagedFileID = driver.findElement(By.xpath("/html/body/div[1]/fieldset/div/div[3]/div[2]"));
 		//WebElement ManagedFileID = driver.findElement(By.className("value"));
 		//System.out.println("value of OC Managed file ID is: " + ManagedFileID.getText());
-		homePage.storeDataFileID();
+		//homePage.storeDataFileID();
+		homePage.writeValues("JCManagedFileID", "JCManagedFileID", JCManagedFileID);
 
 	}
 

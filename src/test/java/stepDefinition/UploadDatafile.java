@@ -56,7 +56,12 @@ public class UploadDatafile {
 	 DataManagedFileID = driver.findElement(By.className("value")).getText();
 		System.out.println("value of OC Managed file ID is: " + DataManagedFileID);
 		//uploadingDatafile.storeDataFileID();
-		homePage.storeDataFileID();
+		//homePage.storeDataFileID();
+		//homePage.fileId = DataManagedFileID;
+		//System.out.println("HomePage.fileId is: "+ HomePage.fileId);
+		homePage.writeValues("DataManagedFileID", "DataManagedFileID", DataManagedFileID);
+		
+		
 		
 	}
 
