@@ -1,6 +1,6 @@
 Feature: Upload Job Creation preset
 
-  @tag1
+  
   Scenario: Uploading .OL-jobpreset
     Given At homepage
     When I click on Upload a Job Creation preset

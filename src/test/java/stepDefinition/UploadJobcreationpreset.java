@@ -61,7 +61,7 @@ public class UploadJobcreationpreset {
 		//System.out.println("value of OC Managed file ID is: " + ManagedFileID.getText());
 		//homePage.storeDataFileID();
 		homePage.writeValues("JCManagedFileID", "JCManagedFileID", JCManagedFileID);
-
+		driver.close();
 	}
 
 }

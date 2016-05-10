@@ -1,6 +1,6 @@
 Feature: Upload Output Creation preset
 
-  @tag1
+ 
   Scenario: Uploading .OL-outputpreset
     Given homepage
     When I click on Upload a Output Creation preset

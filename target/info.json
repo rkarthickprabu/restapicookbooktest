@@ -1,0 +1,894 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: Karthick"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      },
+      {
+        "line": 5,
+        "value": "#Given: Some precondition step"
+      },
+      {
+        "line": 6,
+        "value": "#When: Some key actions"
+      },
+      {
+        "line": 7,
+        "value": "#Then: To observe outcomes or validation"
+      },
+      {
+        "line": 8,
+        "value": "#And,But: To enumerate more Given,When,Then steps"
+      },
+      {
+        "line": 9,
+        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
+      },
+      {
+        "line": 10,
+        "value": "#Examples: Container for s table"
+      },
+      {
+        "line": 11,
+        "value": "#Background: List of steps run before each of the scenarios"
+      },
+      {
+        "line": 12,
+        "value": "#\"\"\" (Doc Strings)"
+      },
+      {
+        "line": 13,
+        "value": "#| (Data Tables)"
+      },
+      {
+        "line": 14,
+        "value": "#@ (Tags/Labels):To group Scenarios"
+      },
+      {
+        "line": 15,
+        "value": "#\u003c\u003e (placeholder)"
+      },
+      {
+        "line": 16,
+        "value": "#\"\""
+      },
+      {
+        "line": 17,
+        "value": "## (Comments)"
+      },
+      {
+        "line": 18,
+        "value": "#Sample Feature Definition Template"
+      },
+      {
+        "line": 19,
+        "value": "#@tag"
+      }
+    ],
+    "line": 20,
+    "elements": [
+      {
+        "line": 33,
+        "name": "Authentication with username and password",
+        "description": "",
+        "id": "authentication-service;authentication-with-username-and-password;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4538299513,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Im on the homepage",
+            "match": {
+              "location": "Login.i_m_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 504560363,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "Login.i_navigate_to_the_login_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5103663092,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "enter ",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 6
+                }
+              ],
+              "location": "Login.enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61784825,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "password ",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 9
+                }
+              ],
+              "location": "Login.password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74794986,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "click Submit",
+            "match": {
+              "location": "Login.click_Submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18569588,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Result for Login is displayed",
+            "match": {
+              "location": "Login.result_for_Login_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@tc1"
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "Authentication with username and password",
+        "description": "",
+        "id": "authentication-service;authentication-with-username-and-password;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2830447268,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Im on the homepage",
+            "match": {
+              "location": "Login.i_m_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 212599016,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "Login.i_navigate_to_the_login_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5477421594,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "enter ol-admin",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ol-admin",
+                  "offset": 6
+                }
+              ],
+              "location": "Login.enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61242007,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "password secrt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secrt",
+                  "offset": 9
+                }
+              ],
+              "location": "Login.password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 149040173,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "click Submit",
+            "match": {
+              "location": "Login.click_Submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14507709,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Result for Login is displayed",
+            "match": {
+              "location": "Login.result_for_Login_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@tc1"
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "Authentication with username and password",
+        "description": "",
+        "id": "authentication-service;authentication-with-username-and-password;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2504562807,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Im on the homepage",
+            "match": {
+              "location": "Login.i_m_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 254060832,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "Login.i_navigate_to_the_login_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5097829289,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "enter ol-admin",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ol-admin",
+                  "offset": 6
+                }
+              ],
+              "location": "Login.enter(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63567919,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "password secret",
+            "match": {
+              "arguments": [
+                {
+                  "val": "secret",
+                  "offset": 9
+                }
+              ],
+              "location": "Login.password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 126598605,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "click Submit",
+            "match": {
+              "location": "Login.click_Submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13470945,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Result for Login is displayed",
+            "match": {
+              "location": "Login.result_for_Login_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@tc1"
+          }
+        ]
+      }
+    ],
+    "name": "Authentication Service",
+    "description": "",
+    "id": "authentication-service",
+    "keyword": "Feature",
+    "uri": "Auth.feature"
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Upload csv data",
+        "description": "",
+        "id": "upload-data-file;upload-csv-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2572841193,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Am on the homepage",
+            "match": {
+              "location": "UploadDatafile.am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 257071286,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on Upload data file",
+            "match": {
+              "location": "UploadDatafile.i_click_on_Upload_data_file()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5747568318,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on Browse button",
+            "match": {
+              "location": "UploadDatafile.click_on_Browse_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5028128757,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "result is displayed",
+            "match": {
+              "location": "UploadDatafile.result_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@tc2"
+          }
+        ]
+      }
+    ],
+    "name": "Upload data file",
+    "description": "",
+    "id": "upload-data-file",
+    "keyword": "Feature",
+    "uri": "UploadData.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Uploading .OL-datamapper",
+        "description": "",
+        "id": "upload-datamapper;uploading-.ol-datamapper",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2384559693,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "on the homepage",
+            "match": {
+              "location": "UploadDatamapper.on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 317194497,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on Upload datamapping config",
+            "match": {
+              "location": "UploadDatamapper.i_click_on_Upload_datamapping_config()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5758865899,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "upload the datamapping config",
+            "match": {
+              "location": "UploadDatamapper.upload_the_datamapping_config()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79669171,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Click on Submit",
+            "match": {
+              "location": "UploadDatamapper.click_on_Submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5025800403,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Datamapping Managed File ID is displayed",
+            "match": {
+              "location": "UploadDatamapper.datamapping_Managed_File_ID_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Upload datamapper",
+    "description": "",
+    "id": "upload-datamapper",
+    "keyword": "Feature",
+    "uri": "UploadDatamapper.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Uploading .OL-template",
+        "description": "",
+        "id": "upload-design-template;uploading-.ol-template",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2510752320,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "on homepage",
+            "match": {
+              "location": "UploadDesigntemplate.on_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 400472792,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on Upload Design template",
+            "match": {
+              "location": "UploadDesigntemplate.i_click_on_Upload_Design_template()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5576263909,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "upload the template",
+            "match": {
+              "location": "UploadDesigntemplate.upload_the_template()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 78501852,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Click Submit",
+            "match": {
+              "location": "UploadDesigntemplate.click_Submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5024454006,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Template Managed File ID is displayed",
+            "match": {
+              "location": "UploadDesigntemplate.template_Managed_File_ID_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Upload Design template",
+    "description": "",
+    "id": "upload-design-template",
+    "keyword": "Feature",
+    "uri": "UploadDesigntemplate.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Uploading .OL-jobpreset",
+        "description": "",
+        "id": "upload-job-creation-preset;uploading-.ol-jobpreset",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3701880207,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "At homepage",
+            "match": {
+              "location": "UploadJobcreationpreset.at_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 309992656,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on Upload a Job Creation preset",
+            "match": {
+              "location": "UploadJobcreationpreset.i_click_on_Upload_a_Job_Creation_preset()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6072207266,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "upload the JC preset",
+            "match": {
+              "location": "UploadJobcreationpreset.upload_the_JC_preset()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 86571853,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on Submit button",
+            "match": {
+              "location": "UploadJobcreationpreset.click_on_Submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5025612947,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Managed File ID for JC is displayed",
+            "match": {
+              "location": "UploadJobcreationpreset.managed_File_ID_for_JC_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Upload Job Creation preset",
+    "description": "",
+    "id": "upload-job-creation-preset",
+    "keyword": "Feature",
+    "uri": "UploadJobcreationpreset.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Uploading .OL-outputpreset",
+        "description": "",
+        "id": "upload-output-creation-preset;uploading-.ol-outputpreset",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3161356366,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "homepage",
+            "match": {
+              "location": "UploadOutputcreationpreset.homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 353393254,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on Upload a Output Creation preset",
+            "match": {
+              "location": "UploadOutputcreationpreset.i_click_on_Upload_a_Output_Creation_preset()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5923408306,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "upload the OC preset",
+            "match": {
+              "location": "UploadOutputcreationpreset.upload_the_OC_preset()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87378922,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on the Submit button",
+            "match": {
+              "location": "UploadOutputcreationpreset.click_on_the_Submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5078755632,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Managed File ID for OC is displayed",
+            "match": {
+              "location": "UploadOutputcreationpreset.managed_File_ID_for_OC_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Upload Output Creation preset",
+    "description": "",
+    "id": "upload-output-creation-preset",
+    "keyword": "Feature",
+    "uri": "UploadOutputcreationpreset.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Entering Datamapping, Content Creation, Job Creation and Output Creation IDs to create output",
+        "description": "",
+        "id": "all-in-one-service;entering-datamapping,-content-creation,-job-creation-and-output-creation-ids-to-create-output",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3154963688,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "At home",
+            "match": {
+              "location": "Allinoneoperation.at_home()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 327679422,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on All-in-One page",
+            "match": {
+              "location": "Allinoneoperation.i_click_on_All_in_One_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1577786939,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "All the four checkbox options are checked",
+            "match": {
+              "location": "Allinoneoperation.all_the_four_checkbox_options_are_checked()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 534500140,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Managed File ID entered in their respective fields",
+            "match": {
+              "location": "Allinoneoperation.managed_File_ID_entered_in_their_respective_fields()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 148418465,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Submit",
+            "match": {
+              "location": "Allinoneoperation.submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31766,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Output file is created",
+            "match": {
+              "location": "Allinoneoperation.output_file_is_created()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "All-In-One Service",
+    "description": "",
+    "id": "all-in-one-service",
+    "keyword": "Feature",
+    "uri": "aio/Allinone.feature"
+  }
+]

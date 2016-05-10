@@ -1,5 +1,7 @@
 package stepDefinition;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,7 +21,25 @@ public class UploadDatafile {
 	String winHandleBefore;
 	public static String DataManagedFileID;
 	
-
+//	public static void deleteValueFile() {
+//		  File file = new File("DataManagedFileID");
+//		  if(file.exists()) {
+//		   file.delete();
+//		  }
+//		 }
+	
+	
+//	try {
+//	    Files.delete(path);
+//	} catch (NoSuchFileException x) {
+//	    System.err.format("%s: no such" + " file or directory%n", path);
+//	} catch (DirectoryNotEmptyException x) {
+//	    System.err.format("%s not empty%n", path);
+//	} catch (IOException x) {
+//	    // File permission problems are caught here.
+//	    System.err.println(x);
+//	}
+//	
 	@Given("^Am on the homepage$")
 	public void am_on_the_homepage() throws Throwable {
 		homePage = new HomePage(driver);
@@ -62,9 +82,9 @@ public class UploadDatafile {
 		homePage.writeValues("DataManagedFileID", "DataManagedFileID", DataManagedFileID);
 		
 		
+		driver.close();
 		
 	}
 
-	
 	
 }

@@ -1,6 +1,6 @@
 Feature: Upload datamapper
 
-  @tag1
+  
   Scenario: Uploading .OL-datamapper
     Given on the homepage
     When I click on Upload datamapping config

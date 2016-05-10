@@ -58,7 +58,9 @@ public void template_Managed_File_ID_is_displayed() throws Throwable {
 	String TemplateManagedFileID = driver.findElement(By.className("value")).getText();
 	System.out.println("value of TemplateManagedFileID is: " + TemplateManagedFileID);
 	
-	homePage.writeValues("TemplateManagedFileID", "TemplateManagedFileID", TemplateManagedFileID);  
+	homePage.writeValues("TemplateManagedFileID", "TemplateManagedFileID", TemplateManagedFileID);
+	
+	driver.close();
 }
 
 	

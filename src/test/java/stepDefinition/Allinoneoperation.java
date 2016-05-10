@@ -117,8 +117,8 @@ public void submit() throws Throwable {
 @Then("^Output file is created$")
 public void output_file_is_created() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
-
-
+	Thread.sleep(5000);
+	driver.close();
 }
 
 }

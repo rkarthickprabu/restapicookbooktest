@@ -63,6 +63,8 @@ public class UploadDatamapper {
 		System.out.println("value of DatamapperManagedFileID is: " + DatamapperManagedFileID);
 		
 		homePage.writeValues("DatamapperManagedFileID", "DatamapperManagedFileID", DatamapperManagedFileID);
+		
+		driver.close();
 	}
 
 	

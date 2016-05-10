@@ -1,7 +1,7 @@
-@tag
+
 Feature: Upload data file
 
-  @tag1
+  @tc2
   Scenario: Upload csv data
     Given Am on the homepage
     When I click on Upload data file
