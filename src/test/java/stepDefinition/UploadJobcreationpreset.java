@@ -2,13 +2,13 @@ package stepDefinition;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
 import pageObject.HomePage;
 import pageObject.UploadingJobcreationpresetPage;
 
@@ -39,6 +39,7 @@ public class UploadJobcreationpreset {
 		 driver.switchTo().window(winHandle);
 	 }
 		Thread.sleep(500);
+		uploadingJobcreationpreset.deletefile();
 		uploadingJobcreationpreset.testUploadingJobcreationpreset();
 		
 	}
@@ -54,13 +55,13 @@ public class UploadJobcreationpreset {
 		Thread.sleep(5000);
 		
 		String JCManagedFileID = driver.findElement(By.className("value")).getText();
-		System.out.println("value of OC Managed file ID is: " + JCManagedFileID);
-		
 		//WebElement ManagedFileID = driver.findElement(By.xpath("/html/body/div[1]/fieldset/div/div[3]/div[2]"));
 		//WebElement ManagedFileID = driver.findElement(By.className("value"));
 		//System.out.println("value of OC Managed file ID is: " + ManagedFileID.getText());
 		//homePage.storeDataFileID();
-		homePage.writeValues("JCManagedFileID", "JCManagedFileID", JCManagedFileID);
+		HomePage.writeValues("JCManagedFileID", "JCManagedFileID", JCManagedFileID);
+		System.out.println("value of JCManagedFileID is: " + JCManagedFileID);
+
 		driver.close();
 	}
 

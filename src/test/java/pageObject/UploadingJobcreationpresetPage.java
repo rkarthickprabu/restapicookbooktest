@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -10,6 +12,14 @@ public class UploadingJobcreationpresetPage extends AbstractPage{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	 public UploadingJobcreationpresetPage deletefile(){
+		  File file = new File("JCManagedFileID");
+		  if(file.exists()) {
+		   file.delete();
+		  }
+		return new UploadingJobcreationpresetPage (driver);
+		 }
 	
 	 public UploadingJobcreationpresetPage testUploadingJobcreationpreset() {
 		driver.findElement(By.id("jcpreset")).sendKeys("C:\\_letter-ol\\JobCreationConfig\\default_jc.OL-jobpreset");

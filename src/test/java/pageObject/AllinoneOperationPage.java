@@ -19,10 +19,5 @@ public class AllinoneOperationPage  extends AbstractPage{
 		return new AllinoneOperationPage(driver);
 		
 	}
-	
-//	public AllinoneOperationPage testtest(){
-//		System.out.println("test");
-//		return new AllinoneOperationPage (driver);
-//	}
-	
+
 }

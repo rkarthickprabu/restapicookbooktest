@@ -1,9 +1,9 @@
 package pageObject;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import stepDefinition.UploadDatafile;
 
 public class UploadingDatafilePage extends AbstractPage{
 
@@ -12,8 +12,20 @@ public class UploadingDatafilePage extends AbstractPage{
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	 public UploadingDatafilePage deletefile(){
+		  File file = new File("DataManagedFileID");
+		  if(file.exists()) {
+		   file.delete();
+		  }
+		return new UploadingDatafilePage (driver);
+		 }
+	
+	
+	
 	 public UploadingDatafilePage testUploadingData() {
-		driver.findElement(By.id("datafile")).sendKeys("C:\\_letter-ol\\Promo-EN-10.csv");
+		 driver.findElement(By.id("datafile")).sendKeys("C:\\_letter-ol\\Promo-EN-10.csv");
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -23,12 +35,4 @@ public class UploadingDatafilePage extends AbstractPage{
 		 return new UploadingDatafilePage (driver);
 	 }
 
-	 
-//	 public UploadingDatafilePage storeDataFileID(){
-//		 System.out.println("Value of DataManagedFileID is: " + UploadDatafile.DataManagedFileID);
-//		 String Str1 = UploadDatafile.DataManagedFileID;
-//		 System.out.println("Value of Str1 is: " + Str1 );
-//
-//		return new UploadingDatafilePage (driver);
-//	 }
 }

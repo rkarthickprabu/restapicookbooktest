@@ -45,7 +45,8 @@ public class UploadDatamapper {
 		}
 
 		// Perform the actions on new window
-		Thread.sleep(500);	
+		Thread.sleep(500);
+		uploadingDatamapper.deletefile();
 		uploadingDatamapper.testUploadingDatamapper();
 	}
 	
@@ -60,10 +61,9 @@ public class UploadDatamapper {
 		Thread.sleep(5000);
 		
 		String DatamapperManagedFileID = driver.findElement(By.className("value")).getText();
+		HomePage.writeValues("DatamapperManagedFileID", "DatamapperManagedFileID", DatamapperManagedFileID);
 		System.out.println("value of DatamapperManagedFileID is: " + DatamapperManagedFileID);
-		
-		homePage.writeValues("DatamapperManagedFileID", "DatamapperManagedFileID", DatamapperManagedFileID);
-		
+
 		driver.close();
 	}
 

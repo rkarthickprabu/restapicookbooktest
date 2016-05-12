@@ -73,6 +73,7 @@ public class Login {
 		driver.switchTo().window(winHandleBefore);
 
 		// Continue with original browser (first window)
+		driver.close();
 	}
 
 

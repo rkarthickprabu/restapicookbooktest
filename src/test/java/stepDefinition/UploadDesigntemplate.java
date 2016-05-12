@@ -17,51 +17,51 @@ public class UploadDesigntemplate {
 	UploadingDesigntemplatePage uploadingDesigntemplate;
 	String winHandleBefore;
 
-	
-@Given("^on homepage$")
-	public void on_homepage() throws Throwable {
-		homePage = new HomePage(driver);
-		homePage.navigateToWebApp();
+		
+	@Given("^on homepage$")
+		public void on_homepage() throws Throwable {
+			homePage = new HomePage(driver);
+			homePage.navigateToWebApp();
+			
+		}
+		
+	@When("^I click on Upload Design template$")
+	public void i_click_on_Upload_Design_template() throws Throwable {
+		winHandleBefore = driver.getWindowHandle();
+		uploadingDesigntemplate = homePage.navigateToUploaddesigntemplate();
+		
 		
 	}
 	
-@When("^I click on Upload Design template$")
-public void i_click_on_Upload_Design_template() throws Throwable {
-	winHandleBefore = driver.getWindowHandle();
-	uploadingDesigntemplate = homePage.navigateToUploaddesigntemplate();
 	
+	@And("^upload the template$")
+	public void upload_the_template() throws Throwable {
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		}
 	
-}
-
-
-@And("^upload the template$")
-public void upload_the_template() throws Throwable {
-	for(String winHandle : driver.getWindowHandles()){
-	    driver.switchTo().window(winHandle);
+		// Perform the actions on new window
+		Thread.sleep(500);
+		uploadingDesigntemplate.deletefile();
+		uploadingDesigntemplate.testUploadingDesigntemplate();
 	}
-
-	// Perform the actions on new window
-	Thread.sleep(500);	
-	uploadingDesigntemplate.testUploadingDesigntemplate();
-}
-
-@And("^Click Submit$")
-public void click_Submit() throws Throwable {
-	driver.findElement(By.id("submit")).click();
-}
-
-@Then("^Template Managed File ID is displayed$")
-public void template_Managed_File_ID_is_displayed() throws Throwable {
-
-	Thread.sleep(5000);
 	
-	String TemplateManagedFileID = driver.findElement(By.className("value")).getText();
-	System.out.println("value of TemplateManagedFileID is: " + TemplateManagedFileID);
+	@And("^Click Submit$")
+	public void click_Submit() throws Throwable {
+		driver.findElement(By.id("submit")).click();
+	}
 	
-	homePage.writeValues("TemplateManagedFileID", "TemplateManagedFileID", TemplateManagedFileID);
+	@Then("^Template Managed File ID is displayed$")
+	public void template_Managed_File_ID_is_displayed() throws Throwable {
 	
-	driver.close();
-}
+		Thread.sleep(5000);
+		
+		String TemplateManagedFileID = driver.findElement(By.className("value")).getText();
+		HomePage.writeValues("TemplateManagedFileID", "TemplateManagedFileID", TemplateManagedFileID);
+		System.out.println("value of TemplateManagedFileID is: " + TemplateManagedFileID);
+
+		driver.close();
+	}
 
 	
 	
